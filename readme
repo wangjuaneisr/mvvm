@@ -1,0 +1,22 @@
+####
+MVVM主要由三个部分组成
+
+
+MVVM.js
+
+compile 编译
+Compile(el,vm)
+使用node.textContent  node.value替换需要更新的内容
+、、、
+obersever（data） 数据劫持
+defineProperty 给每个对象添加get set方法
+observe 数据劫持
+Dep 通知watcher更新
+、、、
+watcher（vm,expr,cb） 视图更新
+对比原来的值与此刻的值 如果不同就更新update
+、、、
+
+
+
+
