@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="message.a">
+    <div>im beautiful</div>
+    <ul>
+        <li>{{message.a}}</li>
+    </ul>
+    {{message.a}}
+</div>
+<script src="watcher.js"></script>
+<script src="obsever.js"></script>
+<script src="compile.js"></script>
+<script src="MVVM.js"></script>
+<script>
+    let vm = new MVVM({
+        el:'#app',
+        data:{
+            message:{
+                a:'hello wj11'
+            }
+        }
+    })
+</script>
+</body>
+</html>

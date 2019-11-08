@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVVM</title>
+</head>
+<body>
+    <div id="app">
+        <!--数据双向绑定  表单-->
+        <!--vue 实现双向绑定： 1 模板的编译 2 数据劫持 3 watcher-->
+        <!--Obeject.defineProperty是所有对象都具有get与set方法，一旦数据发生变化都可以更新模板重新编译-->
+        <input type="text" v-model="msg">
+        <div>im beautiful</div>
+        {{msg}}
+    </div>
+    <script src="compile.js"></script>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script>
+        //数据一般挂在vm上
+        let vm = new Vue({
+            el:"#app",
+            // el:document.getElementById('#app')
+            data:{
+                msg:'hello wj'
+            }
+        })
+    </script>
+</body>
+</html>
